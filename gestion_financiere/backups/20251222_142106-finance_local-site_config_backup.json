@@ -1,0 +1,8 @@
+{
+ "db_name": "gestion_financiere_db",
+ "db_password": "erpdb@25",
+ "db_type": "mariadb",
+ "db_host": "localhost",
+ "db_port": 3306,
+ "db_user": "frappe"
+}
