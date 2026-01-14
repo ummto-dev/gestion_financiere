@@ -5,6 +5,16 @@ app_description = "Application de gestion financiere universitaire basee sur ERP
 app_email = "systeme@ummto.dz"
 app_license = "mit"
 
+fixtures = [
+    {"dt": "DocType", "filters": [["module", "=", "Gestion Financiere"]]},
+    "Custom Field",
+    "Property Setter",
+    "Workflow"
+]
+
+
+
+
 # Apps
 # ------------------
 
