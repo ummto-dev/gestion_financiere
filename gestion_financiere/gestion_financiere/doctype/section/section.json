@@ -1,48 +1,44 @@
 {
  "actions": [],
- "autoname": "format:{ordonnateur}-{initiales_faculte}",
- "creation": "2025-12-29 12:02:44.393695",
+ "allow_rename": 1,
+ "autoname": "format:{code}-{intitule}",
+ "creation": "2026-01-13 13:49:52.787681",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "facult\u00e9_section",
-  "ordonnateur",
-  "intitule_faculte",
-  "initiales_faculte"
+  "section_section",
+  "code",
+  "intitule"
  ],
  "fields": [
   {
-   "fieldname": "facult\u00e9_section",
+   "fieldname": "section_section",
    "fieldtype": "Section Break",
-   "label": "Facult\u00e9"
+   "label": "Section"
   },
   {
-   "fieldname": "ordonnateur",
-   "fieldtype": "Int",
+   "fieldname": "code",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Ordonnateur",
+   "label": "Code",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fieldname": "intitule_faculte",
+   "fieldname": "intitule",
    "fieldtype": "Data",
-   "label": "Intitul\u00e9 Facult\u00e9",
-   "reqd": 1
-  },
-  {
-   "fieldname": "initiales_faculte",
-   "fieldtype": "Read Only",
-   "label": "Initiales Facult\u00e9"
+   "label": "Intitul\u00e9",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-14 09:46:01.088912",
+ "modified": "2026-01-13 14:02:51.148196",
  "modified_by": "Administrator",
  "module": "Gestion Financiere",
- "name": "Faculte",
+ "name": "Section",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

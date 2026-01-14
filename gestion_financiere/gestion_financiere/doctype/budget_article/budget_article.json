@@ -1,48 +1,44 @@
 {
  "actions": [],
- "autoname": "format:{ordonnateur}-{initiales_faculte}",
- "creation": "2025-12-29 12:02:44.393695",
+ "allow_rename": 1,
+ "autoname": "format:{article}",
+ "creation": "2026-01-13 14:36:50.534960",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "facult\u00e9_section",
-  "ordonnateur",
-  "intitule_faculte",
-  "initiales_faculte"
+  "budget_article_section",
+  "article",
+  "montant"
  ],
  "fields": [
   {
-   "fieldname": "facult\u00e9_section",
+   "fieldname": "budget_article_section",
    "fieldtype": "Section Break",
-   "label": "Facult\u00e9"
+   "label": "Budget Article"
   },
   {
-   "fieldname": "ordonnateur",
-   "fieldtype": "Int",
+   "fieldname": "article",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Ordonnateur",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "intitule_faculte",
-   "fieldtype": "Data",
-   "label": "Intitul\u00e9 Facult\u00e9",
+   "label": "Article",
+   "options": "Article",
    "reqd": 1
   },
   {
-   "fieldname": "initiales_faculte",
-   "fieldtype": "Read Only",
-   "label": "Initiales Facult\u00e9"
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-14 09:46:01.088912",
+ "modified": "2026-01-13 14:46:14.122615",
  "modified_by": "Administrator",
  "module": "Gestion Financiere",
- "name": "Faculte",
+ "name": "Budget Article",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

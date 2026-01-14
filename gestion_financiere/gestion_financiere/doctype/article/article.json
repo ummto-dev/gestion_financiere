@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{chapitre}-{code_article}-{code_partie}-{intitule_article}",
+ "creation": "2026-01-13 14:26:31.365965",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "article_section",
+  "code_article",
+  "intitule_article",
+  "chapitre",
+  "code_partie",
+  "intitule_partie",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_section",
+   "fieldtype": "Section Break",
+   "label": "Article"
+  },
+  {
+   "fieldname": "code_article",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code Article",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intitule_article",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Intitul\u00e9 Article",
+   "reqd": 1
+  },
+  {
+   "fieldname": "chapitre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Chapitre",
+   "options": "Chapitre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code_partie",
+   "fieldtype": "Data",
+   "label": "Code Partie"
+  },
+  {
+   "fieldname": "intitule_partie",
+   "fieldtype": "Data",
+   "label": "Intitul\u00e9 Partie"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "A priori\nA posteriori",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-13 14:34:59.215736",
+ "modified_by": "Administrator",
+ "module": "Gestion Financiere",
+ "name": "Article",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
