@@ -6,10 +6,17 @@ app_email = "systeme@ummto.dz"
 app_license = "mit"
 
 fixtures = [
-    {"dt": "DocType"},
+    
     "Custom Field",
     "Property Setter",
-    "Workflow"
+    "Workflow",
+    "Faculte",
+    "Annee Budgetaire",
+    "Budget Article",
+    "Section",
+    "Titre",
+    "Chapitre",
+    "Article"
 ]
 
 
