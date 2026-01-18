@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{chapitre}-{code_article}-{code_partie}-{intitule_article}",
+ "autoname": "format:{chapitre}-{code_article}-{code_partie}",
  "creation": "2026-01-13 14:26:31.365965",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,7 +12,8 @@
   "chapitre",
   "code_partie",
   "intitule_partie",
-  "type"
+  "type",
+  "annee_budgetaire"
  ],
  "fields": [
   {
@@ -58,12 +59,19 @@
    "label": "Type",
    "options": "A priori\nA posteriori",
    "reqd": 1
+  },
+  {
+   "fieldname": "annee_budgetaire",
+   "fieldtype": "Link",
+   "label": "Ann\u00e9e Budg\u00e9taire",
+   "options": "Annee Budgetaire",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 14:34:59.215736",
+ "modified": "2026-01-18 14:45:31.148670",
  "modified_by": "Administrator",
  "module": "Gestion Financiere",
  "name": "Article",

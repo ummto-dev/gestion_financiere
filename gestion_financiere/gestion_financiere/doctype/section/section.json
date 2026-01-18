@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{code}-{intitule}",
+ "autoname": "format:{code}",
  "creation": "2026-01-13 13:49:52.787681",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -35,7 +35,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-13 14:02:51.148196",
+ "modified": "2026-01-18 14:50:30.563181",
  "modified_by": "Administrator",
  "module": "Gestion Financiere",
  "name": "Section",
