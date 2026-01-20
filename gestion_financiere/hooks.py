@@ -10,13 +10,16 @@ fixtures = [
     "Custom Field",
     "Property Setter",
     "Workflow",
+    "Client Script",
+    "Server Script",
     "Faculte",
     "Annee Budgetaire",
     "Budget Article",
     "Section",
     "Titre",
     "Chapitre",
-    "Article"
+    "Article",
+    "Budget Chapitre"
 ]
 
 
