@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Faculte",
+  "enabled": 1,
+  "modified": "2026-01-14 10:19:25.977981",
+  "module": null,
+  "name": "ordonateur+initiales",
+  "script": "frappe.ui.form.on('Faculte', {\r\n    intitule_faculte(frm) {\r\n        const value = frm.doc.intitule_faculte || '';\r\n\r\n        // extraire UNIQUEMENT les lettres majuscules (accentuées incluses)\r\n        const initials = value.match(/[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸ]/g)?.join('') || '';\r\n\r\n        frm.set_value('initiales_faculte', initials);\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Annee Budgetaire",
+  "enabled": 1,
+  "modified": "2026-01-14 13:42:11.655007",
+  "module": null,
+  "name": "Date Picker Année Budgetaire",
+  "script": "frappe.ui.form.on('Annee Budgetaire', {\r\n    onload: function(frm) {\r\n        // Générer la liste des années de 2026 à 2100\r\n        let years = [];\r\n        for (let i = 2026; i <= 2100; i++) {\r\n            years.push(i.toString());\r\n        }\r\n        frm.set_df_property('annee', 'options', years.join('\\n'));\r\n    },\r\n\r\n    date_ouverture: function(frm) {\r\n        if (frm.doc.date_ouverture) {\r\n            // Empêche de choisir une date de clôture avant la date d'ouverture\r\n            frm.set_df_property('date_cloture', 'min_date', frm.doc.date_ouverture);\r\n        }\r\n    },\r\n\r\n    validate: function(frm) {\r\n        // Vérification ouverture < clôture\r\n        if (frm.doc.date_ouverture && frm.doc.date_cloture) {\r\n            const ouverture = new Date(frm.doc.date_ouverture);\r\n            const cloture = new Date(frm.doc.date_cloture);\r\n\r\n            if (ouverture >= cloture) {\r\n                frappe.throw(\"La date d'ouverture doit être avant la date de clôture.\");\r\n            }\r\n        }\r\n    }\r\n});\r\n\r\n\r\n\r\nfrappe.ui.form.on('Annee Budgetaire', {\r\n    date_ouverture: function(frm) {\r\n        if (frm.doc.date_ouverture) {\r\n            // Appliquer la borne minimale directement sur la définition du champ\r\n            frm.fields_dict['date_cloture'].df.min_date = frm.doc.date_ouverture;\r\n            // Rafraîchir le champ pour que le Date Picker recharge la contrainte\r\n            frm.fields_dict['date_cloture'].refresh();\r\n        }\r\n    },\r\n\r\n    validate: function(frm) {\r\n        if (frm.doc.date_ouverture && frm.doc.date_cloture) {\r\n            const ouverture = new Date(frm.doc.date_ouverture);\r\n            const cloture = new Date(frm.doc.date_cloture);\r\n\r\n            if (ouverture >= cloture) {\r\n                frappe.throw(\"La date d'ouverture doit être avant la date de clôture.\");\r\n            }\r\n        }\r\n    }\r\n});\r\n",
+  "view": "Form"
+ }
+]
